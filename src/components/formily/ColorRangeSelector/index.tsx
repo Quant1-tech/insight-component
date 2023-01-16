@@ -3,7 +3,7 @@ import { connect, mapProps } from '@formily/react';
 import type { AntdColorRangeSelectorProps } from './AntdColorRangeSelector';
 import AntdColorRangeSelector from './AntdColorRangeSelector';
 
-const RibbonSelect: ReactFC<AntdColorRangeSelectorProps> = connect(
+const ColorRangeSelector: ReactFC<AntdColorRangeSelectorProps> = connect(
   AntdColorRangeSelector,
   mapProps({
     dataSource: 'options',
@@ -11,4 +11,4 @@ const RibbonSelect: ReactFC<AntdColorRangeSelectorProps> = connect(
   }),
 );
 
-export default RibbonSelect;
+export default ColorRangeSelector;

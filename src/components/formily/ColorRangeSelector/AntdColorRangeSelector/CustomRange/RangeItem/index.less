@@ -1,0 +1,77 @@
+@root-entry-name: 'default';
+@import (reference) '~antd/es/style/themes/index.less';
+
+@range-item-prefix-cls: ~'@{ant-prefix}-formily-range-item';
+
+.@{range-item-prefix-cls} {
+  display: flex;
+  align-items: center;
+  padding: 3px 0;
+
+  &__drag-icon {
+    margin: 3px;
+  }
+
+  &__infor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 24px;
+    cursor: pointer;
+
+    &__popover {
+      z-index: 9999 !important;
+
+      .@{ant-prefix}-popover-inner-content {
+        padding: 0;
+      }
+    }
+
+    &__color-picker {
+      color: @text-color-secondary;
+      background-color: initial !important;
+
+      input {
+        background-color: initial;
+        box-shadow: @border-color-split 0 0 0 @border-width-base inset !important;
+      }
+
+      label {
+        color: inherit !important;
+      }
+
+      .flexbox-fix:last-child {
+        border-top: @border-color-split @border-style-base @border-width-base !important;
+      }
+    }
+
+    &__color {
+      width: 32px;
+      height: 18px;
+    }
+
+    &__input {
+      flex: 1;
+      margin: 0 5px;
+      border: 1px solid rgba(0, 0, 0, 0);
+      cursor: pointer;
+
+      input {
+        color: @text-color-secondary;
+      }
+    }
+
+    &__input:hover {
+      border-color: @text-color-secondary;
+    }
+
+    &__delete-icon:hover {
+      color: #1890ff;
+    }
+  }
+}
+
+.@{range-item-prefix-cls}:hover {
+  background: @item-hover-bg;
+}

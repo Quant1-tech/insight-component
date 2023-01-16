@@ -1,9 +1,9 @@
 @root-entry-name: 'default';
 @import (reference) '~antd/es/style/themes/index.less';
 
-@slider-prefix-cls: ~'@{ant-prefix}-formily-palette-config-item';
+@palette-config-prefix-cls: ~'@{ant-prefix}-formily-palette-config-item';
 
-.@{slider-prefix-cls} {
+.@{palette-config-prefix-cls} {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,7 +12,7 @@
   border-radius: 2px;
 
   &__name {
-    width: 60px;
+    min-width: 60px;
   }
 
   &__select {
